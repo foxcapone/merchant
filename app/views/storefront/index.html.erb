@@ -1,8 +1,14 @@
-<h1>Welcome to Goosebaggin'!</h1>
+<h1 class='text-center'>Welcome to Goosebaggin'!</h1>
 
-<p>
+<p class='text-center'>
   Stuff where more stuff is the best stuff!
 </p>
+
+<% if params[:cat_id] %>
+  <h3>All <%= @category.name.capitalize %></h3>
+<% else %>
+<h3>All Products</h3>
+<% end %>
 
 <div class='row'>
   <% @products.each do |product| %>
