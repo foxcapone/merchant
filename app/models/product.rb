@@ -10,6 +10,11 @@ class Product < ApplicationRecord
   validates_numericality_of :price, greater_than_or_equal_to: 0.01
   validates_numericality_of :quantity, greater_than_or_equal_to: 0
 
+  def self.search_by_name_for_description(string)
+    where("name LIKE ? OR description LIKE ?", "%#{string}%", "%#{string}%")
+
+  end
+
   # Fields
   # name - presence
   # description - presence
