@@ -33,6 +33,9 @@
           </div>
           <%= submit_tag("Search", class: "btn btn-default btn-sm") %>
         <% end %>
+           <div class="pull-left">
+              <li><%= link_to fa_icon('shopping-cart', text: "Your Cart", class: "btn btn-success"), edit_cart_path %></li>
+          </div>
       </div>
         <% if user_signed_in? %>
         <!-- Accounts -->
