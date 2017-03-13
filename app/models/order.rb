@@ -15,6 +15,15 @@ class Order < ApplicationRecord
     line_items << item
     end
   end
+
+  def subtotal
+    # SQL version
+    line_items.select("SUM(quantity * price) AS sum")[0].sum
+    # Ruby version
+    # line_items.to_a.sum { |item| item.total }
+  end
 end
+
+
 
 

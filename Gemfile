@@ -44,20 +44,20 @@ gem 'font-awesome-rails'
 gem 'stamp'
 
 gem 'simple_form'
-
 gem 'paperclip', '~> 4.3'
-
 gem 'devise'
-
 gem 'figaro'
+
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
-
   gem 'pry-byebug'
-
   gem 'pry-rails'
+
+
 
   # use sqlite3 as the database for Active Records
   gem 'sqlite3'
@@ -70,6 +70,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener'
 end
 
 group :production do
