@@ -12,7 +12,7 @@ Rails.application.configure do
   }
 
   # Mailer config
-  config.action_mailer.smtp_setting = {
+  config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
     domain: Rails.application.secrets.domain_name,
